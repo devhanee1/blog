@@ -1,4 +1,9 @@
 <!doctype html>
+
+---
+const { title = "KH's Blog" } = Astro.props;
+---
+
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
@@ -6,17 +11,17 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="stylesheet" href="../styles/global.css">
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{title}</title>
 	</head>
 	<body>
 		<header>
-			      <h1 class="text-4xl font-bold text-blue-600"><a href="/">  Astro 블로그</a></h1>
+			<h1 class="text-3xl font-bold"><a href="/">{title}</a></h1>
 		</header>
-		<main>
+		<main class="max-w-3xl mx-auto px-4">
 			<slot />
 		</main>
 
-    	<footer>
+    	<footer class="text-center text-sm text-gray-500 mt-12 mb-6">
 		    <hr />
 	        <p>© 2025 Some. Powered by Astro.</p>
 		</footer>

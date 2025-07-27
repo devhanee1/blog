@@ -4,11 +4,22 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="stylesheet" href="/styles/global.css">
 		<meta name="generator" content={Astro.generator} />
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+		<header>
+			      <h1><a href="/">  Astro 블로그</a></h1>
+		</header>
+		<main>
+			<slot />
+		</main>
+
+    	<footer>
+		    <hr />
+	        <p>© 2025 Some. Powered by Astro.</p>
+		</footer>
 	</body>
 </html>
 
